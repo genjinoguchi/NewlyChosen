@@ -5,16 +5,16 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
+import javax.swing.JLabel;
 
 public class Square extends JLabel{
 	private String pieceOnSquare;
 	private Color squareColor;
 	private int x0,y0,x1,y1;
-	private BufferedImage image;
 
-	private int x0,y0,x1,y1;
 	public Square(){
-		
+		super();
+		setOpaque(true);
 	}
 	
 	public void setColor(Color c){

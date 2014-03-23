@@ -19,13 +19,10 @@ public class ChessGui{
 		frame.setVisible(true);
 
 		background = frame.getContentPane();
-		frame.setLayout(new GridLayout());
 
 		b = new BoardPanel();
 		background.add(b);
 		b.repaint();
-
-		addIcon("blackQueen.png", 3, 3);
 	}
 
 	private class BoardPanel extends JPanel{
@@ -34,7 +31,7 @@ public class ChessGui{
 
 		public BoardPanel(){
 			super();
-			setLayout(new GridLayout(numRanks, numFiles);
+			setLayout(new GridLayout(Chess.numRanks, Chess.numFiles));
 		}
 		public void layoutSquares(){
 			for(int y= 0;y<Chess.numRanks;y++){
@@ -47,16 +44,13 @@ public class ChessGui{
 		public void paintComponent(Graphics g){
 			Graphics2D g2 = (Graphics2D)g;
 			
-			/*
 			for(int y=0;y<Chess.numFiles;y++){
 				for(int x=0;x<Chess.numRanks;x++){
-					System.out.println(Chess.board[y][x].getColor());
 					g2.setColor(Chess.board[y][x].getColor());
 					g2.fillRect(x*Chess.squareLength,y*Chess.squareLength,(x+1)*Chess.squareLength,(y+1)*Chess.squareLength);
 
 				}
 			}		
-			*/
 		}
 	}
 }

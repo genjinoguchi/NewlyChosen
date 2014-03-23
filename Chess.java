@@ -9,13 +9,10 @@ public class Chess{
 	public final static int squareLength = 50;
 	public static Square[][] board;
 
-	public static Image blackBishop, blackKnight, blackPawn, blackQueen, blackRook, blackKing;
-	public static Image whiteBishop, whiteKing, whiteKnight, whitePawn, whiteQueen, whiteRook;
+	public static ImageIcon blackBishop, blackKnight, blackPawn, blackQueen, blackRook, blackKing;
+	public static ImageIcon whiteBishop, whiteKing, whiteKnight, whitePawn, whiteQueen, whiteRook;
 
-
-
-	public static void main(String[] args) {
-		
+	public Chess(){
 		URL imageURL1 = Chess.class.getResource("Pieces.blackBishop.png");
 		Chess.blackBishop = new ImageIcon(imageURL1);
 		URL imageURL2 = Chess.class.getResource("Pieces.blackKing.png");
@@ -40,8 +37,9 @@ public class Chess{
 		Chess.whiteQueen = new ImageIcon(imageURL11);
 		URL imageURL12 = Chess.class.getResource("Pieces.whiteRook.png");
 		Chess.whiteRook = new ImageIcon(imageURL12);
+	}
 
-
+	public static void main(String[] args) {
 		ArrayChess ac = new ArrayChess();
 		ChessGui cg = new ChessGui(20,20);
 

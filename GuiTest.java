@@ -11,7 +11,7 @@ public class GuiTest{
 	private JFrame frame;
 	private static Container background;
 	private static MyPanel p;
-	private Image img;
+	private static Image img;
 
 	private static MyLabel l1, l2, l3, l4;
 	
@@ -23,7 +23,7 @@ public class GuiTest{
 		frame.setSize(500,300);
 		frame.setVisible(true);
 
-		URL imageurl = GuiTest.class.getResource("Pieces.blackBishop.png");
+		URL imageurl = GuiTest.class.getResource("Pieces/blackBishop.png");
 		img = Toolkit.getDefaultToolkit().getImage(imageurl);
 
 		background = frame.getContentPane();
@@ -48,7 +48,6 @@ public class GuiTest{
 
 	private class MyPanel extends JPanel implements MouseMotionListener{
 		private boolean mouseIn;
-		private BufferedImage img;
 		private int mouseX, mouseY;
 
 		public MyPanel(){
@@ -63,9 +62,8 @@ public class GuiTest{
 			*/
 		}
 		public void paintComponent(Graphics g){
-			Graphics2D g2 = (Graphics2D)g;
-			g2.setColor(Color.blue);
-			g2.drawImage(img,mouseX, mouseY,null);
+		    Graphics2D g2 = (Graphics2D)g;
+		    g2.drawImage(img,mouseX, mouseY, this);
 		}
 		
 		public void mouseMoved(MouseEvent e) {

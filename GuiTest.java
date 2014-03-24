@@ -11,11 +11,10 @@ public class GuiTest{
 	private JFrame frame;
 	private static Container background;
 	private static MyPanel p;
-	private Image img;
+	private BufferedImage img;
 
 	private static MyLabel l1, l2, l3, l4;
 	
-
 	public void go(){
 		frame = new JFrame("Gui test");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -23,8 +22,7 @@ public class GuiTest{
 		frame.setSize(500,300);
 		frame.setVisible(true);
 
-		URL imageurl = GuiTest.class.getResource("Pieces.blackBishop.png");
-		img = Toolkit.getDefaultToolkit().getImage(imageurl);
+		img = (b)
 
 		background = frame.getContentPane();
 		p = new MyPanel();
@@ -53,7 +51,7 @@ public class GuiTest{
 
 		public MyPanel(){
 			super();
-			//setLayout(new GridLayout(2,2)); //Causes a lot of bugs.
+			setLayout(new GridLayout(2,2)); //Causes a lot of bugs.
 			addMouseMotionListener(this);
 			/*
 			img = Toolkit.getDefaultToolkit().getImage(GuiTest.class.getResource("Pieces/blackBishop.png"));

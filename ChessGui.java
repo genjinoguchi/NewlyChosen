@@ -47,7 +47,7 @@ public class ChessGui{
 			for(int y=0;y<Chess.numFiles;y++){
 				for(int x=0;x<Chess.numRanks;x++){
 					g2.setColor(Chess.board[y][x].getColor());
-					g2.fillRect(x*Chess.squareLength,y*Chess.squareLength,(x+1)*Chess.squareLength,(y+1)*Chess.squareLength);
+					g2.fillRect(x*Chess.squareLength,y*Chess.squareLength,Chess.squareLength,Chess.squareLength);
 
 				}
 			}		

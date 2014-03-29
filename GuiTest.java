@@ -1,9 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import javax.imageio.*;
-import java.io.*;
-import java.awt.image.BufferedImage;
 import java.net.*;
 
 public class GuiTest{
@@ -63,7 +60,7 @@ public class GuiTest{
 		}
 		public void paintComponent(Graphics g){
 		    Graphics2D g2 = (Graphics2D)g;
-		    g2.drawImage(img,mouseX, mouseY, this);
+		    g2.drawImage(img,mouseX - 38, mouseY - 40, this);
 		}
 		
 		public void mouseMoved(MouseEvent e) {

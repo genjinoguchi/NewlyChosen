@@ -1,18 +1,19 @@
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
-import javax.swing.JPanel;
+import java.awt.*;
+import java.awt.event.*;
+import java.swing.*;
 
 public class Piece extends JLabel{
+	Image pieceImage;
+	Color squareColor;
 
-	public Piece(String filepath){
-		super();
-		BufferedImage icon = ImageIO.read(new File(filepath));
-		this = new JLabel(new ImageIcon(icon));
+	public Piece(Image i, Color color){
+		super(new new ImageIcon(i));
+		pieceIcon = i;
+		squareColor = color;
+	}
 
+	public Piece(Color color){
+		squareColor = color;
 	}
 
 

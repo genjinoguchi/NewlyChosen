@@ -11,6 +11,7 @@ public class BoardPanel extends JPanel{
 		super();
 		setLayout(new GridLayout(Chess.numRanks, Chess.numFiles));
 	}
+	
 	public void layoutSquares(){
 		for(int y= 0;y<Chess.numRanks;y++){
 			for(int x=0;x<Chess.numFiles;x++){

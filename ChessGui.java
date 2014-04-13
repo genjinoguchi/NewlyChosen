@@ -2,13 +2,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class ChessGui{
-	private JFrame frame;
+public class Board extends JFrame implements ActionListener{
 	private static Container background;
-	private static int height, width;
 	private static BoardPanel b;
 
-	public ChessGui(int L, int h){
+	public Board(int L, int h){
 		frame = new JFrame("Chess");
 		height = h;
 		width = L;

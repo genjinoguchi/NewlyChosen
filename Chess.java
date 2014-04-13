@@ -43,7 +43,7 @@ public class Chess{
 
 	public static void main(String[] args) {
 		ArrayChess ac = new ArrayChess();
-		ChessGui cg = new ChessGui(20,20);
+		Board b = new Board(20,20,30);
 
 	}
 

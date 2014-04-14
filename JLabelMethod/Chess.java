@@ -5,7 +5,7 @@ import java.net.*;
 
 public class Chess{
 
-	public final static int numRanks=30, numFiles=30;
+	public final static int numRanks=16, numFiles=16;
 	public final static int squareLength = 30;
 	public static Square[][] board;
 
@@ -43,7 +43,8 @@ public class Chess{
 
 	public static void main(String[] args) {
 		ArrayChess ac = new ArrayChess();
-		Board b = new Board(20,20,30);
+		Board b = new Board();
+		System.out.println(ac);
 
 	}
 

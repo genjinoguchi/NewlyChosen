@@ -1,0 +1,14 @@
+NEWLYCHOSEN
+
+The original template on which the game can be built.
+All chess information is in Chess.java
+The information about individual pieces is in 2D array of Squares, which extend JLabel.
+The gui is in Board.java.
+
+4/14/14
+Split the project into two streams-- one using a combination JLabel and MouseMotionListener, and another one using purely paintComponent for the gui as well as MouseMotionListener
+
+3/28/14
+Import techniques/things from GuiTest.java into the actual code.
+Add each of the JLabels, setOpaque(false) for all of them. Make them all MouseListeners so that there is no need to configure mouse presses by pixel or coordinate.
+Test adding icons to the JLabels and repainting to see fine results.

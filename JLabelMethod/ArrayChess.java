@@ -11,8 +11,8 @@ public class ArrayChess{
 	}
 
 	public void resetBoard(){
-		for(int y=0;y<Chess.board.length;y++){
-			for(int x=0;x<Chess.board[0].length;x++){
+		for(int y=0;y<Chess.numFiles;y++){
+			for(int x=0;x<Chess.numRanks;x++){
 				Chess.board[y][x]=new Square();
 				Chess.board[y][x].setPiece("_");
 			}
@@ -25,9 +25,9 @@ public class ArrayChess{
 	    for(int y = 0; y < Chess.numRanks; y++){
 			for(int x = 0; x < Chess.numFiles; x++){
 				if(isDark==oddLine){
-				    Chess.board[x][y].setColor(Color.BLACK);
+				    Chess.board[y][x].setBackground(Color.BLACK);
 				}else{
-				    Chess.board[x][y].setColor(Color.WHITE);
+				    Chess.board[y][x].setBackground(Color.WHITE);
 				}
 				isDark = !isDark;
 		    }
@@ -37,8 +37,8 @@ public class ArrayChess{
 
 	public String toString(){
 		String total = "";
-		for(int y=0;y<Chess.board.length;y++){
-			for(int x=0;x<Chess.board[0].length;x++){
+		for(int y=0;y<Chess.numFiles;y++){
+			for(int x=0;x<Chess.numRanks;x++){
 				total+=Chess.board[y][x] + " ";
 			}
 			total+="\n";

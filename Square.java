@@ -8,7 +8,7 @@ import javax.imageio.ImageIO;
 public class Square{
 	private String pieceOnSquare;
 	private Color squareColor;
-	private int x0,y0,x1,y1;
+	private int px, py;	//Coordinates of upper right corner;
 
 	public Square(){
 	
@@ -20,16 +20,19 @@ public class Square{
 	public Color getColor(){
 		return squareColor;
 	}
-	public void setCoordinates(int x0,int y0,int x1,int y1){
-		this.x0 = x0;
-		this.x1 = x1;
-		this.y0 = y0;
-		this.y1 = y1;
+	public void setCoordinates(int px, int py){
+		this.px = px;
+		this.py = py;
+	}
+	public int getX(){
+		return px;
+	}
+	public int getY(){
+		return py;
 	}
 	public void setPiece(String s){
 		pieceOnSquare = s;
 	}
-
 	public String toString(){
 		return pieceOnSquare;
 	}

@@ -6,7 +6,6 @@ import java.net.*;
 public class Board extends JFrame{
 	private static Container background;
 	private static BoardPanel bp;
-	Image img;
 
 	public Board(){
 		super("Chess");
@@ -22,8 +21,6 @@ public class Board extends JFrame{
 		background.add(bp);
 		bp.repaint();
 
-		URL imageURL = Board.class.getResource("../Pieces/blackBishop.png");
-		img = Toolkit.getDefaultToolkit().getImage(imageURL);
 	}
 
 	public void actionPerformed(ActionEvent e){
@@ -42,26 +39,35 @@ public class Board extends JFrame{
 			addMouseListener(this);
 		}
 
+		public void placePiece(Image i){
+
+		}
+
 		public void paintComponent(Graphics g){
 			Graphics2D g2 = (Graphics2D)g;
 			
 			g2.setColor(Color.white);
-			/*
+			
 			g2.fillRect(0,0,Chess.squareLength*Chess.numFiles,Chess.squareLength*Chess.numRanks);
 			for(int y=0;y<Chess.numFiles;y++){
 				for(int x=0;x<Chess.numRanks;x++){
 					if(Chess.board[y][x].getColor()==Color.black){
 						g2.setColor(Color.black);
 						g2.fillRect(x*Chess.squareLength,y*Chess.squareLength,Chess.squareLength,Chess.squareLength);
+						g2.drawString(Chess.board.toString(),x*Chess.squareLength,y*Chess.squareLength);
 					}
 				}
 			}
+			/*
+			for(int y=0;y<Chess.numFiles;y++){
+				for(int x=0;x<Chess.numRanks;x++){
+					g2.setColor(Chess.board[y][x].getColor());
+					g2.fillRect(Chess.board[y][x].getX(),Chess.board[y][x].getY(),Chess.squareLength,Chess.squareLength);
+				}
+			}
 			*/
-			//g2.setColor(Color.red);
 			
-			g2.drawImage(img,mouseX, mouseY, this);
-			
-			//g2.fillRect(mouseX, mouseY, 40,40);
+			g2.drawImage(Chess.blackKing,mouseX-25, mouseY-25, this);	
 		}
 
 		public void mousePressed(MouseEvent e){

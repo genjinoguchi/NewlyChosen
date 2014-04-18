@@ -20,18 +20,17 @@ public class GuiTest{
 		frame.setSize(500,300);
 		frame.setVisible(true);
 
-		URL imageurl = GuiTest.class.getResource("../Pieces/blackBishop.png");
-		System.out.println(imageurl);
+		URL imageurl = GuiTest.class.getResource("Pieces/blackBishop.png");
 		img = Toolkit.getDefaultToolkit().getImage(imageurl);
 
 		background = frame.getContentPane();
 		p = new MyPanel();
 		background.add(p);
 
-		l1 = new MyLabel(new ImageIcon("../Pieces/blackBishop.png"));
-		l2 = new MyLabel(new ImageIcon("../Pieces/whiteBishop.png"));
-		l3 = new MyLabel(new ImageIcon("../Pieces/blackKing.png"));
-		l4 = new MyLabel(new ImageIcon("../Pieces/whiteKing.png"));
+		l1 = new MyLabel(new ImageIcon("Pieces/blackBishop.png"));
+		l2 = new MyLabel(new ImageIcon("Pieces/whiteBishop.png"));
+		l3 = new MyLabel(new ImageIcon("Pieces/blackKing.png"));
+		l4 = new MyLabel(new ImageIcon("Pieces/whiteKing.png"));
 		l1.randomInt = 1;
 		l2.randomInt = 2;
 		l3.randomInt = 3;

@@ -5,6 +5,7 @@ import java.swing.*;
 public class Piece extends JLabel{
 	Image pieceImage;
 	Color squareColor;
+	
 
 	public Piece(Image i, Color color){
 		super(new new ImageIcon(i));

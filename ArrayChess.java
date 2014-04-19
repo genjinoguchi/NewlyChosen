@@ -35,6 +35,19 @@ public class ArrayChess{
 		}
     }
 
+    public void highlightCoveredSquares(String color){
+		for(int y = 0; y < Chess.numRanks; y++){
+			for(int x = 0; x < Chess.numFiles; x++){
+				if(!isEmpty() && pieceColor.equals(color)){
+					if(pieceOnSquare.equals("King")){
+						
+					}
+
+				}
+			}
+		}
+	}
+
 	public String toString(){
 		String total = "";
 		for(int y=0;y<Chess.numFiles;y++){

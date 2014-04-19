@@ -27,7 +27,7 @@ public class Board extends JFrame{
 
 	}
 
-	private class BoardPanel extends JPanel implements MouseListener,MouseMotionListener{
+	private class BoardPanel extends JPanel implements MouseListener, MouseMotionListener{
 		boolean isDark = true;
 		boolean oddLine = false;
 		private int mouseX, mouseY;

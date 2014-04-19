@@ -11,9 +11,9 @@ public class Square{
 	private int px, py;	//Coordinates of upper right corner;
 
 	public Square(){
-	
+
 	}
-	
+
 	public void setColor(Color c){
 		squareColor = c;
 	}

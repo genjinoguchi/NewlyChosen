@@ -76,8 +76,7 @@ public class Chess{
 		System.out.println(Chess.blackKing==null);
 		ArrayChess ac = new ArrayChess();
 		Board b = new Board();
-		System.out.println(ac);
-
+		b.go();
 	}
 
 

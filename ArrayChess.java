@@ -14,7 +14,7 @@ public class ArrayChess{
 		for(int y=0;y<Chess.numFiles;y++){
 			for(int x=0;x<Chess.numRanks;x++){
 				Chess.board[y][x]=new Square();
-				Chess.board[y][x].setPiece("_");
+				Chess.board[y][x].setPiece("Newly Chosen");
 			}
 		}
 	}

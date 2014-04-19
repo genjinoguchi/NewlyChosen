@@ -6,7 +6,7 @@ import java.net.*;
 public class Chess{
 
 	public final static int numRanks=16, numFiles=16;
-	public final static int squareLength = 300;
+	public final static int squareLength = 30;
 	public static Square[][] board;
 
 	public static Image blackBishop, blackKnight, blackPawn, blackQueen, blackRook, blackKing;

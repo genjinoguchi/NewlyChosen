@@ -54,7 +54,7 @@ public class Board extends JFrame{
 					if(Chess.board[y][x].getColor()==Color.black){
 						g2.setColor(Color.black);
 						g2.fillRect(x*Chess.squareLength,y*Chess.squareLength,Chess.squareLength,Chess.squareLength);
-						g2.drawString(Chess.board.toString(),x*Chess.squareLength,y*Chess.squareLength);
+						//g2.drawString(Chess.board.toString(),x*Chess.squareLength,y*Chess.squareLength);
 					}
 				}
 			}

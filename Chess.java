@@ -12,6 +12,10 @@ public class Chess{
 	public static Image blackBishop, blackKnight, blackPawn, blackQueen, blackRook, blackKing;
 	public static Image whiteBishop, whiteKing, whiteKnight, whitePawn, whiteQueen, whiteRook;
 
+	public static Color R = new Color(255,90,90);
+	public static Color B = new Color(90,90,255);
+	public static Color Middle = new Color(235,90,235);
+
 	public Chess(){
 		Toolkit tkit = Toolkit.getDefaultToolkit();
 

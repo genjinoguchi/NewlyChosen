@@ -35,8 +35,22 @@ public class Square{
 
 	//squareColor	
 	public void setColor(Color c){
+		if(squareColor==null){
+			squareColor = c;
+		}
+		else{ 
+			if(squareColor.equals(Color.black) || squareColor.equals(Color.white) || squareColor.equals(c)){
+				squareColor = c;
+			}else{
+				squareColor = Chess.Middle;
+			}
+		}
+	}
+
+	public void absoluteSetColor(Color c){
 		squareColor = c;
 	}
+
 	public Color getColor(){
 		return squareColor;
 	}
@@ -91,7 +105,11 @@ public class Square{
 	}
 	
 	public String toString(){
-		return pieceOnSquare;
+		if(isEmpty()){
+			return "E";
+		}else{
+			return pieceOnSquare;
+		}
 	}
 
 

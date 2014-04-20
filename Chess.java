@@ -40,7 +40,6 @@ public class Chess{
 		URL imageURL12 = Chess.class.getResource("Pieces/whiteRook.png");
 		Chess.whiteRook = tkit.getImage(imageURL12);
 
-		System.out.println(Chess.blackKing==null);
 
 	}
 
@@ -73,7 +72,6 @@ public class Chess{
 		URL imageURL12 = Chess.class.getResource("Pieces/whiteRook.png");
 		Chess.whiteRook = tkit.getImage(imageURL12);
 
-		System.out.println(Chess.blackKing==null);
 		ArrayChess ac = new ArrayChess();
 		Board b = new Board();
 		b.go();

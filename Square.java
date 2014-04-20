@@ -1,35 +1,35 @@
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
 public class Square{
-	private String pieceOnSquare, pieceColor;
+	private String pieceOnSquare;
 	private boolean pieceHere, mouseHere;
-	private Color squareColor;
+	private Color squareColor, pieceColor;
+	private Image face;
 	private int px, py;	//Coordinates of upper right corner;
-	//private int rank, file; //array indices
+	private int rank, file; //array indices
 
 	public Square(){
-
+		pieceHere = false;
 	}
 
 	//Mouse sensitivity:
 	public boolean getMouseHere(){
-		return mouseHere;
+		boolean temp = mouseHere;
+		mouseHere = false;
+		return temp;
 	}
-	public void changeMouseHere(){
-		mouseHere = !mouseHere;
+	public void setMouseHere(){
+		mouseHere = true;
 	}
 	
 	//Empty or with piece:
 	public boolean isEmpty(){
-		return pieceHere;
+		return !pieceHere;
 	}
-	public void changePieceHere(){
-		pieceHere = !pieceHere;
+	public void setPieceHere(boolean b){
+		pieceHere = b;
 	}
 
 
@@ -42,11 +42,19 @@ public class Square{
 	}
 
 	//pieceColor
-	public String getPieceColor(){
+	public Color getPieceColor(){
 		return pieceColor;
 	}
-	public void setPieceColor(String s){
-		pieceColor = s;
+	public void setPieceColor(Color C){
+		pieceColor = C;
+	}
+
+	//Images
+	public void setFace(Image i){
+		face = i;
+	}
+	public Image getFace(){
+		return face;
 	}
 
 	//topCoords
@@ -61,7 +69,6 @@ public class Square{
 		return py;
 	}
 
-/*
 	//Ranks n' files:
 	public void setRankFile(int rank, int file){
 		this.rank = rank;
@@ -73,13 +80,13 @@ public class Square{
 	public int getFile(){
 		return file;
 	}
-*/
+
 
 	//Piecetypes:
 	public String getPieceOnSquare(){
 		return pieceOnSquare;
 	}
-	public void setPiece(String s){
+	public void setPieceOnSquare(String s){
 		pieceOnSquare = s;
 	}
 	

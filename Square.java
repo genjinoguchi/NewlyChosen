@@ -1,21 +1,42 @@
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
 public class Square{
 	private String pieceOnSquare;
 	private boolean pieceHere, mouseHere;
 	private Color squareColor, pieceColor;
+<<<<<<< HEAD
+=======
+	private Image face;
+>>>>>>> FETCH_HEAD
 	private int px, py;	//Coordinates of upper right corner;
 	private int rank, file; //array indices
 
 	public Square(){
-
+		pieceHere = false;
 	}
 
+	//Mouse sensitivity:
+	public boolean getMouseHere(){
+		boolean temp = mouseHere;
+		mouseHere = false;
+		return temp;
+	}
+	public void setMouseHere(){
+		mouseHere = true;
+	}
+	
+	//Empty or with piece:
+	public boolean isEmpty(){
+		return !pieceHere;
+	}
+	public void setPieceHere(boolean b){
+		pieceHere = b;
+	}
+
+
+<<<<<<< HEAD
 	//Mouse sensitivity:
 	public boolean getMouseHere(){
 		return mouseHere;
@@ -33,20 +54,52 @@ public class Square{
 	}
 
 
+=======
+>>>>>>> FETCH_HEAD
 	//squareColor	
 	public void setColor(Color c){
+		if(squareColor==null){
+			squareColor = c;
+		}
+		else{ 
+			if(squareColor.equals(Color.black) || squareColor.equals(Color.white) || squareColor.equals(c)){
+				squareColor = c;
+			}else{
+				squareColor = Chess.Middle;
+			}
+		}
+	}
+
+	public void absoluteSetColor(Color c){
 		squareColor = c;
 	}
+
 	public Color getColor(){
 		return squareColor;
 	}
 
 	//pieceColor
+<<<<<<< HEAD
 	public String getPieceColor(){
 		return pieceColor;
 	}
 	public void setPieceColor(String s){
 		pieceColor = s;
+=======
+	public Color getPieceColor(){
+		return pieceColor;
+	}
+	public void setPieceColor(Color C){
+		pieceColor = C;
+	}
+
+	//Images
+	public void setFace(Image i){
+		face = i;
+	}
+	public Image getFace(){
+		return face;
+>>>>>>> FETCH_HEAD
 	}
 
 	//topCoords
@@ -78,12 +131,20 @@ public class Square{
 	public String getPieceOnSquare(){
 		return pieceOnSquare;
 	}
+<<<<<<< HEAD
 	public void setPiece(String s){
+=======
+	public void setPieceOnSquare(String s){
+>>>>>>> FETCH_HEAD
 		pieceOnSquare = s;
 	}
 	
 	public String toString(){
-		return pieceOnSquare;
+		if(isEmpty()){
+			return "E";
+		}else{
+			return pieceOnSquare;
+		}
 	}
 
 

@@ -12,6 +12,10 @@ public class Chess{
 	public static Image blackBishop, blackKnight, blackPawn, blackQueen, blackRook, blackKing;
 	public static Image whiteBishop, whiteKing, whiteKnight, whitePawn, whiteQueen, whiteRook;
 
+	public static Color R = new Color(255,90,90);
+	public static Color B = new Color(90,90,255);
+	public static Color Middle = new Color(235,90,235);
+
 	public Chess(){
 		Toolkit tkit = Toolkit.getDefaultToolkit();
 
@@ -40,7 +44,6 @@ public class Chess{
 		URL imageURL12 = Chess.class.getResource("Pieces/whiteRook.png");
 		Chess.whiteRook = tkit.getImage(imageURL12);
 
-		System.out.println(Chess.blackKing==null);
 
 	}
 
@@ -73,7 +76,6 @@ public class Chess{
 		URL imageURL12 = Chess.class.getResource("Pieces/whiteRook.png");
 		Chess.whiteRook = tkit.getImage(imageURL12);
 
-		System.out.println(Chess.blackKing==null);
 		ArrayChess ac = new ArrayChess();
 		Board b = new Board();
 		b.go();

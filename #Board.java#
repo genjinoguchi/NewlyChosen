@@ -2,14 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.net.*;
-import java.util.*;
-import java.io.*;
 
 public class Board extends JFrame{
 	private static Container background;
 	private static BoardPanel bp;
-	int timeStart = (int)System.currentTimeMillis();
-	int counter = 0;
 
 	public Board(){
 		super("Chess");
@@ -31,7 +27,7 @@ public class Board extends JFrame{
 
 	}
 
-	private class BoardPanel extends JPanel implements MouseListener, MouseMotionListener{
+	private class BoardPanel extends JPanel implements MouseListener,MouseMotionListener{
 		boolean isDark = true;
 		boolean oddLine = false;
 		private int mouseX, mouseY;
@@ -63,7 +59,7 @@ public class Board extends JFrame{
 				}
 			}
 			
-			g2.drawImage(Chess.blackKing,mouseX-25, mouseY-25, this);
+			g2.drawImage(Chess.blackKing,mouseX-25, mouseY-25, this);	
 		}
 
 		public void mousePressed(MouseEvent e){
@@ -84,21 +80,15 @@ public class Board extends JFrame{
 		public void mouseMoved(MouseEvent e){
 			mouseX = e.getX();
 			mouseY = e.getY();
+			System.out.println(mouseX + " " + mouseY);
+			this.repaint();
 		}
 		public void mouseDragged(MouseEvent e){
 			
 		}
-	}
 
-	public void go(){
-		timeStart = (int)System.currentTimeMillis();
-		int timeDifference = 1;
-		while(timeDifference<16){
-			timeDifference = (int)System.currentTimeMillis() - timeStart; 
-		}
-		System.out.println(counter++);
-		repaint();
-		go();
+
+
 	}
 
 }

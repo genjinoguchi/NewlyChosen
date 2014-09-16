@@ -6,14 +6,14 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Square{
-	private String pieceOnSquare, pieceColor;
+	private String pieceOnSquare;
 	private boolean pieceHere, mouseHere;
-	private Color squareColor;
+	private Color squareColor, pieceColor;
 	private int px, py;	//Coordinates of upper right corner;
-	//private int rank, file; //array indices
+	private int rank, file; //array indices
 
 	public Square(){
-	
+
 	}
 
 	//Mouse sensitivity:
@@ -26,7 +26,7 @@ public class Square{
 	
 	//Empty or with piece:
 	public boolean isEmpty(){
-		return pieceHere;
+		return !pieceHere;
 	}
 	public void changePieceHere(){
 		pieceHere = !pieceHere;
@@ -61,7 +61,6 @@ public class Square{
 		return py;
 	}
 
-/*
 	//Ranks n' files:
 	public void setRankFile(int rank, int file){
 		this.rank = rank;
@@ -73,7 +72,7 @@ public class Square{
 	public int getFile(){
 		return file;
 	}
-*/
+
 
 	//Piecetypes:
 	public String getPieceOnSquare(){

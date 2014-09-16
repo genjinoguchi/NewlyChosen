@@ -11,7 +11,7 @@ public class GuiTest{
 	private static Image img;
 
 	private static MyLabel l1, l2, l3, l4;
-	
+
 
 	public void go(){
 		frame = new JFrame("Gui test");
@@ -35,12 +35,12 @@ public class GuiTest{
 		l2.randomInt = 2;
 		l3.randomInt = 3;
 		l4.randomInt = 4;
-		
+
 		p.add(l1);
 		p.add(l2);
 		p.add(l3);
 		p.add(l4);
-		
+
 	}
 
 	private class MyPanel extends JPanel implements MouseMotionListener{
@@ -62,7 +62,7 @@ public class GuiTest{
 		    Graphics2D g2 = (Graphics2D)g;
 		    g2.drawImage(img,mouseX - 38, mouseY - 40, this);
 		}
-		
+
 		public void mouseMoved(MouseEvent e) {
 			mouseX = e.getX();
 			mouseY = e.getY();
@@ -70,7 +70,7 @@ public class GuiTest{
 			frame.repaint();
 		}
 		public void mouseDragged(MouseEvent e) {}
-		
+
 	}
 	private class MyLabel extends JLabel implements MouseMotionListener{
 		private Color color;
